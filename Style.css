@@ -1,0 +1,130 @@
+body{ 
+	background-color:blanchedalmond;
+	color:crimson;
+
+}
+.navbar{
+	background-color:crimson;
+}
+
+#clear{
+	clear:both;
+}
+.carousel{
+	width:95%;
+	margin:auto;
+}
+
+.carousel-inner img {
+	margin: auto;
+}
+
+.item{
+	border: crimson solid 2px;
+	margin:15px;
+	text-align:center;
+	padding:5px;
+	width:20%;
+	float:left;
+}
+
+.item_details{
+	font-size: 10pt;
+}
+.item_link{
+	cursor: pointer;
+}
+
+.myButton{
+	background-color:crimson;
+	width:90%;
+	color:rgba(211,211,211,0.7);
+	margin:auto;
+	border:none;
+	cursor: pointer;
+	height:30px;
+}
+
+.myButton:hover{
+	text-decoration:none;
+	color:rgba(211,211,211,1);
+}
+
+.dropdown-menu{
+	background-color:crimson;
+}
+
+.dropdown-item{
+	color:rgba(211,211,211,0.7);
+}
+
+.dropdown-item:hover{
+	background-color:crimson;
+	color:rgba(211,211,211,1);
+}
+
+.item-container{
+	border: 2px solid crimson;
+	padding:20px;
+	position:relative;
+}
+
+.item-container > .myButton{
+	width:150px;
+}
+
+.item-container > img{
+	float:left;
+	margin-right:15px;
+}
+
+.tab-content{
+	background-color:crimson;
+	color:rgba(211,211,211,1);
+}
+
+#tab > a.active{
+	background-color:crimson;
+	color:rgba(211,211,211,1);
+	border:none;
+}
+
+#tab > a{
+	background-color:blanchedalmond;
+	color:crimson;
+}
+
+#tab > a:hover{
+	border:1px solid crimson;
+}
+
+.tab-pane{
+	padding:10px;
+}
+
+.input-form > label[for="email"], .input-form > label[for="pass"], .input-form > label[for="name"]{
+	width:70px;
+}
+
+.input-form > input[type="email"]:hover,.input-form > input[type="password"]:hover, .input-form > input[type="text"]:hover{
+	border:1px solid crimson;
+}
+
+.input-form > a{
+	font-size:14px;
+	color:crimson;
+}
+
+.input-form > a:hover{
+	color:#8c0d26;
+}
+
+.wrapper{
+	position:relative;
+	padding:15px;
+}
+
+.side-div-left{
+	width:20%;
+	float:left;
+}
