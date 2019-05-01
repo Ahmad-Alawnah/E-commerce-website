@@ -102,7 +102,7 @@ body{
 	padding:10px;
 }
 
-.input-form > label[for="email"], .input-form > label[for="pass"], .input-form > label[for="name"]{
+.input-form > label[for]{
 	width:70px;
 }
 
