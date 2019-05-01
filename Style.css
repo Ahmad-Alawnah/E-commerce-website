@@ -128,3 +128,32 @@ body{
 	width:20%;
 	float:left;
 }
+.cart-main-container, .cart-main-container >a{
+	color:lightgray;
+	font-size:12px;
+}
+	
+.cart-container{
+	border: 1px black solid;
+	overflow-y:scroll;
+	width:250px;
+	height:50px;
+	display:inline-block;
+	padding:5px;
+}
+.cart-item{
+	display:block;
+	margin-bottom:5px;
+}
+.cart-item > input{
+	border:none;
+	width:20px;
+	height:20px;
+	background-color:blanchedalmond;
+	text-align:center;
+	float:right;
+	color:crimson;
+}
+.cart-item > input:hover{
+	background-color:lightblue;
+}
