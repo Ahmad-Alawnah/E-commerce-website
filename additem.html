@@ -23,10 +23,17 @@
 		
 		<form method="" action="" class="input-form text-left">
 		
-			<label for="itemName">Name:</label> <input type="text" id="itemName" name="itemName"><br>
-			<label for="itemImg">Image:</label> <input type="file" id="itemImg"><br>
-			<label for="itemPrice">Price:</label> <input type="text" id="itemPrice" name="itemPrice"><br>
-			<label for="itemDescription">Description:</label><br> <textarea id="itemDescription" name="itemDescription" cols="20" rows="5"></textarea> <br><br>
+			<label for="itemName">Name:</label> <input type="text" id="itemName" name="itemName" required><br>
+			<label for="itemImg">Image:</label> <input type="file" id="itemImg" required><br>
+			<label for="itemPrice">Price:</label> <input type="text" id="itemPrice" name="itemPrice" required><br>
+			<label for="itemCategory">Category:</label> <select id="itemCategory" required>
+														<option selected disabled>Please select</option>
+														<option>Category1</option>
+														<option>Category2</option>
+														<option>Category3</option>
+														<option>Category4</option>
+														</select> <br>
+			<label for="itemDescription">Description:</label><br> <textarea id="itemDescription" name="itemDescription" cols="20" rows="5" required></textarea> <br><br>
 			
 			<input type="submit" class="myButton" value="Add">
 		</form>
