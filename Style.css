@@ -106,7 +106,7 @@ body{
 	width:70px;
 }
 
-.input-form > input[type="email"]:hover,.input-form > input[type="password"]:hover, .input-form > input[type="text"]:hover,.input-form > input[type="number"]:hover, .input-form > input[type="month"]:hover{
+.input-form > input[type="email"]:hover,.input-form > input[type="password"]:hover, .input-form > input[type="text"]:hover,.input-form > input[type="number"]:hover, .input-form > input[type="month"]:hover,textarea:hover{
 	outline:1px solid crimson;
 }
 
@@ -208,4 +208,10 @@ body{
 .links_that_should_look_like_buttons:hover{
 	text-decoration:none;
 	color:rgba(211,211,211,1);
+}
+
+#itemImg{
+	display:inline-block;
+	width:70%;
+
 }
