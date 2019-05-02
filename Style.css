@@ -126,7 +126,7 @@ body{
 
 .side-div-left{
 	width:20%;
-	float:left;
+	display:inline-block;
 }
 .cart-main-container, .cart-main-container >a{
 	color:lightgray;
@@ -157,3 +157,28 @@ body{
 .cart-item > input:hover{
 	background-color:lightblue;
 }
+
+.wrapper > .cart-container{
+	font-size:16pt;
+	width:100%;
+	overflow-y:none;
+	height:100%;
+}
+
+.wrapper > .cart-container > .cart-item >input {
+	width:40px;
+	height:40px;
+	color:blanchedalmond;
+	background-color:crimson;
+}
+
+.wrapper > .cart-container > .cart-item >input:hover{
+	background-color:lightblue;
+}
+
+.wrapper > .cart-container > .cart-item {
+	margin-bottom:20px;
+}
+.wrapper > .myButton {
+	display:block;
+	margin:0 auto;
