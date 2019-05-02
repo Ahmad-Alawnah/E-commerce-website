@@ -106,8 +106,8 @@ body{
 	width:70px;
 }
 
-.input-form > input[type="email"]:hover,.input-form > input[type="password"]:hover, .input-form > input[type="text"]:hover{
-	border:1px solid crimson;
+.input-form > input[type="email"]:hover,.input-form > input[type="password"]:hover, .input-form > input[type="text"]:hover,.input-form > input[type="number"]:hover, .input-form > input[type="month"]:hover{
+	outline:1px solid crimson;
 }
 
 .input-form > a{
@@ -161,7 +161,8 @@ body{
 .wrapper > .cart-container{
 	font-size:16pt;
 	width:100%;
-	overflow-y:none;
+	border:2px crimson solid;
+	overflow-y:hidden;
 	height:100%;
 }
 
@@ -182,3 +183,29 @@ body{
 .wrapper > .myButton {
 	display:block;
 	margin:0 auto;
+}
+
+.checkout > label[for]{
+	width:120px;
+}
+.checkout > input[type="submit"]{
+	width:40%;
+	display:block;
+	margin:auto;
+}
+
+.links_that_should_look_like_buttons{
+	text-decoration:none;
+	display:block;
+	width:20%;
+	height:30px;
+	background-color:crimson;
+	color:rgba(211,211,211,0.7);
+	margin:0 auto;
+	text-align:center;
+}
+
+.links_that_should_look_like_buttons:hover{
+	text-decoration:none;
+	color:rgba(211,211,211,1);
+}
