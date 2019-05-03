@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="urf-8"> </meta>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link href = "CSS\bootstrap.min.css" rel="stylesheet"> </link>
+	<link href="CSS\bootstrap-grid.min.css" rel="stylesheet"> </link>
+	<link href="CSS\bootstrap-reboot.min.css" rel="stylesheet"> </link>
+	<link href="Style.css" rel="stylesheet"> </link>
+	
+	<title> Add offer </title>
+	
+</head>
+
+<body>
+
+	<div class="wrapper container-fluid text-center align-center">
+		
+		<h1 class="h1">Settings</h1>
+		<div class = "container col-lg-4 col-md-6 col-sm-8 item-container text-center align-center">
+
+			<h2 class="h2">Personal Information</h2>
+			<form action="" method="" class="input-form text-left">
+			
+				<label for="name" style="width:100px">Name:</label> <input type="text" id="name" name="name" value><br>
+				<label for="email"  style="width:100px">E-mail:</label> <input type="email" id="email" name="email"><br>
+				<label for="country"  style="width:100px">Country:</label> <input type="text" id="country" name="country"><br>
+				<label for="city"  style="width:100px">City:</label> <input type="text" id="city" name="city"> <br>
+				<label for="street"  style="width:100px">Street:</label> <input type="text" id="street" name="street"><br>
+				<label for="age"  style="width:100px">Age:</label> <input id="age" type="number" min="16" max="110"> <br><br>
+				
+				<input type="submit" class="myButton" value="Save changes" style="width:60%;display:block;margin:auto;">
+				
+			</form>
+			
+		</div><br>
+		
+		<div class = "container col-lg-4 col-md-6 col-sm-8 item-container text-center align-center">
+
+			<h2 class="h2">Added Items</h2>
+			<form action="" method="" class="input-form text-left">
+			
+				<select id="required" required style="width:270px;display:block;margin:auto;">
+					<option selected disabled>Select an item</option>
+					<option> Item Item Item </option>
+					<option> Item Item Item </option>
+					<option> Item Item Item </option>
+					<option> Item Item Item </option>
+				</select> <br>
+				
+				<label for="itemName">Name:</label> <input type="text" id="itemName" name="itemName" required><br>
+				<label for="itemImg">Image:</label> <input type="file" id="itemImg" required><br>
+				<label for="itemPrice">Price:</label> <input type="text" id="itemPrice" name="itemPrice" required><br>
+				<label for="itemCategory">Category:</label> <select id="itemCategory" required>
+																<option selected disabled>Please select</option>
+																<option>Category1</option>
+																<option>Category2</option>
+																<option>Category3</option>
+																<option>Category4</option>
+															</select> <br>
+			<label for="itemDescription">Description:</label><br> <textarea id="itemDescription" name="itemDescription" cols="20" rows="5" required></textarea> <br> <br>
+			<input type="submit" class="myButton" value="Save Changes" style="width:45%;margin:auto"> <input type="submit" class="myButton" value="Delete Item" style="width:45%;margin:auto"><br>
+			</form>
+			
+		</div> <br>
+		
+		<div class = "container col-lg-4 col-md-6 col-sm-8 item-container text-center align-center">
+
+			<h2 class="h2">Change Password</h2>
+			<form action="" method="" class="input-form text-left">
+			
+				<label for="Cpass"  style="width:140px">Current Password:</label> <input type="password" id="pass" name="currentPassword"> <br>
+			
+				<label for="Npass"  style="width:140px">New Password:</label> <input type="password" id="Npass" name="password"> <br>
+				<label for="ConfirmNPass"  style="width:140px">Confirm Password:</label> <input type="password" id="ConfirmNPass" name="newPassword"> <br><br>
+				
+				<input type="submit" class="myButton" value="Save changes" style="width:60%;display:block;margin:auto;">
+				
+			</form>
+			
+		</div><br>
+
+
+
+
+
+
+
+
+
+
+
+	<script src="JQuery\jquery-3.3.1.min.js"> </script>
+	<script src="JS\bootstrap.min.js"> </script>
+	<script src="JS\bootstrap.bundle.min.js"> </script>
+</body>
+
+</html>
