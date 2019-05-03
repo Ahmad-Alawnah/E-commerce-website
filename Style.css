@@ -110,6 +110,10 @@ body{
 	outline:1px solid crimson;
 }
 
+.input-form > input[type="email"]:focus,.input-form > input[type="password"]:focus, .input-form > input[type="text"]:focus,.input-form > input[type="number"]:focus, .input-form > input[type="month"]:focus,textarea:focus{
+	outline:1px solid crimson;
+}
+
 .input-form > a{
 	font-size:14px;
 	color:crimson;
@@ -214,4 +218,16 @@ body{
 	display:inline-block;
 	width:70%;
 
+}
+
+.Error{
+	background-color:pink;
+	border:1px solid red;
+	color:red;
+}
+
+.Success{
+	background-color:lightgreen;
+	border:1px green solid;
+	color:green;
 }
