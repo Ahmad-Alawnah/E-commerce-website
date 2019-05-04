@@ -14,7 +14,7 @@
 	
 </head>
 
-<body>
+<body onload="loadNewlyArrivals(); loadCart();">
 <!-- Navagation bar -->
 <nav class="navbar navbar-expand-md sticky-top navbar-dark">
   <a class="navbar-brand" href="#"><img id="logo" src="Images/Logo.png" alt="Logo"></a>
@@ -110,9 +110,9 @@
   </a>
 </div> <br>
 
-	<h1 class="h1"> Special offers </h1>
-	<div class="container-fluid" >
-		<div class="row">
+	<h1 class="h1"> Newly Added </h1>
+	<div class="container-fluid">
+		<div class="row" id="newestArrivals">
 			<div class = "item col">
 			  <a href="" class="item_link">
 				<img src="Images/Item.png" alt="item"> <br>

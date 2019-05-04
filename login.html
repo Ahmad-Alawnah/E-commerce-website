@@ -17,16 +17,16 @@
 <body>
 
 
-	<div class = "container col-lg-3 col-md-4 col-sm-8 item-container text-center align-center">
+	<div class = "container col-lg-3 col-md-4 col-sm-8 item-container text-center align-center" id="logInDiv">
 
 		<h2> Welcome back!</h2>
 		<h4> Please take a moment to log in </h4>
 		
-		<form action="" method="" class="input-form text-left">
+		<form action="" method="" class="input-form text-left" id="logInForm" onsubmit="return validateLogInForm()">
 		
-			<label for="email">E-mail:</label> <input type="email" id="email" name="email" placeholder="example@domain.com" autofocus required> <br>
-			<label for="pass">Password:</label> <input type="password" id="pass" name="password" required> <br>
-			<label><input type="checkbox"name="remember"> Remember me </label><br> 
+			<label for="email">E-mail:</label> <input type="email" id="email" name="email" placeholder="example@domain.com" autofocus> <br>
+			<label for="pass">Password:</label> <input type="password" id="pass" name="password"> <br>
+			<label><input type="checkbox"name="remember" id="remember"> Remember me for a month </label><br> 
 			<input type="submit" class="myButton" style="display:block;margin:auto;" value="Login">
 			
 			<a href="signup.html">Need an account? sign up here!</a> <br>

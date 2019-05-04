@@ -71,11 +71,11 @@
  <div id="clear"> </div>
  
  
-	<h1 class="h1"> Category name </h1>
+	<h1 class="h1" id="categoryName"> Category name </h1>
  <div class="wrapper">
 	<div class="side-div-left item-container">
 		<h4> Settings </h4>
-		<form action="" method="">
+		<form action="" method="" onsubmit="applyFilters()">
 			<label for="sort"> Sort: </label>
 				<select id="sort" name="sort">
 					<option selected> Most bought </option>
@@ -85,7 +85,7 @@
 				</select> <br>
 			
 			<span>0 <input type="range" id="range" name="range" min="0" max="2000" value="2000" oninput="price_range.value = range.value"> max price </span> <br>
-			Range: <output id="price_range" for="range"> 2000 </output> JD<br><br>
+			Range: <output id="priceRange" for="range"> 2000 </output> JD<br><br>
 			<input type="submit" class="myButton" value="Apply"> <br>
 
 		</form>
