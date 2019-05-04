@@ -33,7 +33,6 @@ function validateSignUpForm(){
 		return false;
 		
 	}
-		
 	else if (passw !=cpassw) {
 		errorText = document.createTextNode("Passwords do not match, please try agian");
 		error.appendChild(errorText);
@@ -58,6 +57,7 @@ function validateSignUpForm(){
 		myDiv.insertBefore(error,myForm);	
 		return false;
 	}
+
 	else return true;
 	
 }
@@ -66,5 +66,75 @@ function deleteError(){
 	current = document.getElementById("error");
 	if (current!=null){
 		current.parentNode.removeChild(current);
+	}
+}
+
+
+function validateAddItemForm(){
+	
+	item_name = document.getElementById("itemName").value;
+	item_img = document.getElementById("itemImg");
+	item_price= document.getElementById("itemPrice").value;
+	item_quantity = document.getElementById("itemQuantity").value;
+	list = document.getElementById("itemCategory");
+	item_category = list.options[list.selectedIndex].value;
+	item_description = document.getElementById("itemDescription").value;
+	item_specification = document.getElementById("itemSpecification").value;
+	
+	current = document.getElementById("error");
+	if (current!=null){
+		current.parentNode.removeChild(current);
+	}
+	else setTimeout(deleteError,6000);
+	
+	error = document.createElement("DIV");
+	att = document.createAttribute("class");
+	id = document.createAttribute("id");
+	att.value="Error ";
+	att.value +="text-center";
+	id.value="error";
+	error.setAttributeNode(att);
+	error.setAttributeNode(id);
+	myForm = document.getElementById("addItemForm");
+	myDiv= document.getElementById("addItemDiv");
+	
+	
+	if (item_name==""||item_price==""||item_description==""||itemSpecification==""){
+		
+		errorText = document.createTextNode("Please fill all fields");
+		error.appendChild(errorText);
+		myDiv.insertBefore(error,myForm);	
+		return false;
+		
+	}
+	else if (isNaN(item_price) ||item_price<=0){
+		
+		errorText = document.createTextNode("Please enter a valid price");
+		error.appendChild(errorText);
+		myDiv.insertBefore(error,myForm);	
+		return false;
+		
+	}
+	else if (isNaN(item_quantity) ||item_quantity <=0){
+		
+		errorText = document.createTextNode("Please enter a valid quantity");
+		error.appendChild(errorText);
+		myDiv.insertBefore(error,myForm);	
+		return false;		
+		
+	}
+	else if (item_category=="Please select"){
+		
+		errorText = document.createTextNode("Please select a category");
+		error.appendChild(errorText);
+		myDiv.insertBefore(error,myForm);	
+		return false;
+		
+	}
+	else{
+		
+		//Add item to DB
+		alert("Item added successfully");
+		return true;
 	}
 }
