@@ -10,7 +10,7 @@
 	<link href="CSS\bootstrap-reboot.min.css" rel="stylesheet"> </link>
 	<link href="Style.css" rel="stylesheet"> </link>
 	
-	<title> Add offer </title>
+	<title> Settings </title>
 	
 </head>
 
@@ -19,17 +19,17 @@
 	<div class="wrapper container-fluid text-center align-center">
 		
 		<h1 class="h1">Settings</h1>
-		<div class = "container col-lg-4 col-md-6 col-sm-8 item-container text-center align-center">
+		<div class = "container col-lg-4 col-md-6 col-sm-8 item-container text-center align-center" id="updatePersonalInfoDiv">
 
-			<h2 class="h2">Personal Information</h2>
-			<form action="" method="" class="input-form text-left">
+			<h2 class="h2" >Personal Information</h2>
+			<form action="" method="" class="input-form text-left" onload = "loadPersonalInfo()" onsubmit="return updatePersonalInfo()" id="updatePersonalInfoForm">
 			
 				<label for="name" style="width:100px">Name:</label> <input type="text" id="name" name="name" value><br>
 				<label for="email"  style="width:100px">E-mail:</label> <input type="email" id="email" name="email"><br>
 				<label for="country"  style="width:100px">Country:</label> <input type="text" id="country" name="country"><br>
 				<label for="city"  style="width:100px">City:</label> <input type="text" id="city" name="city"> <br>
 				<label for="street"  style="width:100px">Street:</label> <input type="text" id="street" name="street"><br>
-				<label for="age"  style="width:100px">Age:</label> <input id="age" type="number" min="16" max="110"> <br><br>
+				<label for="age"  style="width:100px">Age:</label> <input id="age" type="text"> <br><br>
 				
 				<input type="submit" class="myButton" value="Save changes" style="width:60%;display:block;margin:auto;">
 				
@@ -37,12 +37,12 @@
 			
 		</div><br>
 		
-		<div class = "container col-lg-4 col-md-6 col-sm-8 item-container text-center align-center">
+		<div class = "container col-lg-4 col-md-6 col-sm-8 item-container text-center align-center" id="itemsSettingsDiv">
 
 			<h2 class="h2">Added Items</h2>
-			<form action="" method="" class="input-form text-left">
+			<form action="" method="" class="input-form text-left" onload="loadAddedItems()" onsubmit="return updateItemsInfo()" id="itemsSettingsForm">
 			
-				<select id="required" required style="width:270px;display:block;margin:auto;">
+				<select id="required" required style="width:270px;display:block;margin:auto;"  onchange="getItemInfo()">
 					<option selected disabled>Select an item</option>
 					<option> Item Item Item </option>
 					<option> Item Item Item </option>
@@ -50,30 +50,30 @@
 					<option> Item Item Item </option>
 				</select> <br>
 				
-				<label for="itemName">Name:</label> <input type="text" id="itemName" name="itemName" required><br>
-				<label for="itemImg">Image:</label> <input type="file" id="itemImg" required><br>
-				<label for="itemPrice">Price:</label> <input type="text" id="itemPrice" name="itemPrice" required><br>
-				<label for="itemCategory">Category:</label> <select id="itemCategory" required>
+				<label for="itemName">Name:</label> <input type="text" id="itemName" name="itemName"><br>
+				<label for="itemImg">Image:</label> <input type="file" id="itemImg"><br>
+				<label for="itemPrice">Price:</label> <input type="text" id="itemPrice" name="itemPrice"><br>
+				<label for="itemCategory">Category:</label> <select id="itemCategory">
 																<option selected disabled>Please select</option>
 																<option>Category1</option>
 																<option>Category2</option>
 																<option>Category3</option>
 																<option>Category4</option>
 															</select> <br>
-				<label for="itemQuantity">Quantity:</label> <input type="text" id="itemQuantity" name="itemQuantity" required><br>
-				<label for="itemDescription">Description:</label><br> <textarea id="itemDescription" name="itemDescription" cols="20" rows="5" required></textarea> <br> <br>
-				<label for="itemSpecification">Specification:</label><br> <textarea id="itemSpecification" name="itemSpecification" cols="20" rows="5" required></textarea> <br><br>
-				<input type="submit" class="myButton" value="Save Changes" style="width:45%;margin:auto"> <input type="submit" class="myButton" value="Delete Item" style="width:45%;margin:auto"><br>
+				<label for="itemQuantity">Quantity:</label> <input type="text" id="itemQuantity" name="itemQuantity"><br>
+				<label for="itemDescription">Description:</label><br> <textarea id="itemDescription" name="itemDescription" cols="20" rows="5"></textarea> <br> <br>
+				<label for="itemSpecification">Specification:</label><br> <textarea id="itemSpecification" name="itemSpecification" cols="20" rows="5"></textarea> <br><br>
+				<input type="submit" class="myButton" value="Save Changes" style="width:45%;margin:auto"> <input type="button" class="myButton" value="Delete Item" style="width:45%;margin:auto" onclick="deleteItem()"><br>
 			</form>
 			
 		</div> <br>
 		
-		<div class = "container col-lg-4 col-md-6 col-sm-8 item-container text-center align-center">
+		<div class = "container col-lg-4 col-md-6 col-sm-8 item-container text-center align-center" id="changePasswordDiv">
 
 			<h2 class="h2">Change Password</h2>
-			<form action="" method="" class="input-form text-left">
+			<form action="" method="" class="input-form text-left" onsubmit="return updatePassword()" id="changePasswordForm">
 			
-				<label for="Cpass"  style="width:140px">Current Password:</label> <input type="password" id="pass" name="currentPassword"> <br>
+				<label for="Cpass"  style="width:140px">Current Password:</label> <input type="password" id="Cpass" name="currentPassword"> <br>
 			
 				<label for="Npass"  style="width:140px">New Password:</label> <input type="password" id="Npass" name="password"> <br>
 				<label for="ConfirmNPass"  style="width:140px">Confirm Password:</label> <input type="password" id="ConfirmNPass" name="newPassword"> <br><br>
