@@ -52,7 +52,7 @@ function validateSignUpForm(){
 		myDiv.insertBefore(error,myForm);	
 		return false;
 	}
-	else if (isNaN(age) || age<12 || age>150 ||age==0){
+	else if ((isNaN(age) || age<12 || age>150 ||age==0) && age!=""){
 		errorText = document.createTextNode("Please enter a valid age");
 		error.appendChild(errorText);
 		myDiv.insertBefore(error,myForm);	
